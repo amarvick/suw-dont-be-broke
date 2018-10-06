@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-// import './App.css';
-import Home from './js/components/home'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// Import components here
+import Home from './js/components/home'
 
 class App extends Component {
   constructor() {
