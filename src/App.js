@@ -5,12 +5,21 @@ import Home from './js/components/home'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
+  constructor() {
+    super()
+
+    // this.state = {
+    //   loggedIn: false,
+    //   loggedInUserId: ''
+    // }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <Router>
-            <div>
+            {/* <div> */}
               <Route exact path='/' component={Home}/>
               {/* <Route path='/about' component={About}/> */}
               {/* <Route path='/services' component={Services}/> */}
@@ -19,7 +28,7 @@ class App extends Component {
               {/* <Route path='/gender' component={Gender}/> */}
               {/* <Route path='/drones' component={Drones}/> */}
               {/* <Route path='/software' component={Software}/> */}
-            </div>
+            {/* </div> */}
           </Router>
         </header>
       </div>
