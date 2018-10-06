@@ -2,7 +2,7 @@
  * Description: Home Page                                       */
 
 import React, { Component } from 'react'
-import '../stylesheets/home.css'
+// import '../stylesheets/home.css'
 
 class Home extends Component {
   constructor() {
@@ -10,12 +10,15 @@ class Home extends Component {
   }
 
   // The question template
-  render(props) {   
+  render(props) {  
+    let number = 10
+    
     return (
       <div>
+        { number }
       </div>
     )
   }
 }
 
-export default Home
+export default Home;

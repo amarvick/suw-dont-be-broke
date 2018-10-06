@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+// import './index.css'
 import App from './App'
 import store from './js/store'
 import * as serviceWorker from './serviceWorker'
@@ -8,9 +8,10 @@ import * as serviceWorker from './serviceWorker'
 const root = document.getElementById('root')
 
 ReactDOM.render(
-    <Provider store = {store}>
-        <App />
-    </Provider>, root
+    // <Provider store = {store}>
+        <App />,
+    // </Provider>, 
+    root
 )
 
 // If you want your app to work offline and load faster, you can change
