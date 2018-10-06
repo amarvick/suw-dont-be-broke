@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Dont Be Broke SWEDU Team Frontend
 
-ReactJS Front-End of the "Don't be Broke" web application which helps young adults retrieve a financial education
+ReactJS Front-End of the "Don't be Broke" web application which helps young adults retrieve a financial education. Utilizes Redux for state management.
 
 ## Setup
 
