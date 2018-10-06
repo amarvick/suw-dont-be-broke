@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Import components here
 import Home from './js/components/home/home'
+import Nav from './js/components/nav/nav'
 
 class App extends Component {
   constructor() {
@@ -29,7 +30,13 @@ class App extends Component {
               {/* <Route path='/drones' component={Drones}/> */}
               {/* <Route path='/software' component={Software}/> */}
           </Router>
+          <li className="active">One Item</li>
+          <li>Two Item</li>
+          <li>Three Item</li>
         </header>
+        <div className="subNav">
+          <li>Useful Info here</li>
+        </div>
       </div>
     );
   }
