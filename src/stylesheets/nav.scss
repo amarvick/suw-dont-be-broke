@@ -1,3 +1,5 @@
+$primary-color: #515d2b;
+
 li {
   display: inline-block;
   margin: auto;
@@ -12,9 +14,23 @@ li {
 
   li {
     &.active {
+      color: $primary-color;
 
       &:after {
-        border-bottom: 5px solid #515d2b;
+        border-bottom: 5px solid $primary-color;
+        bottom: -1rem;
+        content: "";
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      
+      &:after{
+        border-bottom: 5px solid $primary-color;
         bottom: -1rem;
         content: "";
         left: 0;
