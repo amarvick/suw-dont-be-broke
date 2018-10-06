@@ -33,7 +33,7 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
-  const loaders = [
+  const rules = [
     require.resolve('style-loader'),
     // {
     //   test: /\.scss$/,
@@ -66,7 +66,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     },
     {
       test: /\.scss$/,
-      loaders: [
+      rules: [
         require.resolve( 'style-loader' ),
         require.resolve( 'css-loader' ),
         require.resolve( 'sass-loader' )
@@ -89,9 +89,9 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     },
   ];
   if (preProcessor) {
-    loaders.push(require.resolve(preProcessor));
+    rules.push(require.resolve(preProcessor));
   }
-  return loaders;
+  return rules;
 };
 
 // This is the development configuration.

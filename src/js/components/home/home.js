@@ -2,7 +2,7 @@
  * Description: Home Page                                       */
 
 import React, { Component } from 'react'
-import '../../stylesheets/home.scss'
+import '../../../stylesheets/home.scss'
 
 class Home extends Component {
   constructor() {
