@@ -5,9 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ReactJS Front-End of the "Don't be Broke" web application which helps young adults retrieve a financial education. Utilizes Redux for state management.
 
 ## Setup
-Host locally in the outermost branch and type 'npm start' to run in localhost:3000
 
-#### Authorization POST http://172.17.5.252/api/authorize
+1) Clone source with ```git clone https://github.com/amarvick/suw-dont-be-broke.git```
+2) Grab dependencies with ```npm install```
+3) Start with ```npm start```
 
-###### Send {"username": "user1@gmail.com", "password": "user1 password"}
-
+#### Linked with backend at  ```git clone https://github.com/josephkniest/suw-dont-be-broke-backend.git```: http://172.17.5.252/api/authorize

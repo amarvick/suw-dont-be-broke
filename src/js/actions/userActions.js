@@ -1,7 +1,7 @@
 /* File Name: userActions.js                                        *
  * Description: Retrieves the logged in user & his/her information  */
 
- import Spotify from 'spotify-web-api-js'
+ import Spotify from 'spotify-web-api-js' // GET RID OF THIS EVENTUALLY! Without it this iwll crash
 
  import { loadingInProgress, loadingComplete } from './inGameActions'
  
@@ -21,7 +21,7 @@
                  type: UserActionTypes.FETCH_USER_SUCCESS,
                  payload: response
              })
-             dispatch(loadingComplete())
+             dispatch(loadingComplete()) // NEED A LOADING COMPLETE FUNCTION
          })
  
          .catch((error) => {
