@@ -14,7 +14,7 @@
  export function fetchUser() {
      return function(dispatch) {
          dispatch(loadingInProgress())
-        //  spotifyApi.getMe()
+         spotifyApi.getMe()
          // *AXIOS REQUEST HERE TO GET THE USER INFORMATION*
          .then((response) => {
              dispatch({

@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, StartupActions } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 // Import components here
 import Home from './js/components/home/home'
@@ -18,20 +19,16 @@ class App extends Component {
   }
 
   render() {
+    let user = this.props.user || {}
+
     return (
       <div className="App">
         <header className="App-header">
-          { !this.state.loggedIn && 
+          { user != null && 
             <Router>
               <div>
                 <Route exact path='/' component={Home}/>
                 <Route path='/about' component={About}/>
-                {/* <Route path='/services' component={Services}/> */}
-                {/* <Route path='/contact' component={Contact}/> */}
-                {/* <Route path='/blog' component={Blog}/> */}
-                {/* <Route path='/gender' component={Gender}/> */}
-                {/* <Route path='/drones' component={Drones}/> */}
-                {/* <Route path='/software' component={Software}/> */}
               </div>
             </Router>
           }
@@ -41,4 +38,16 @@ class App extends Component {
   }
 }
 
-export default App
+// wraps dispatch to create nicer functions to call within our component
+// Mapping dispatch actions to the props
+const mapDispatchToProps = (dispatch) => ({
+  dispatch: dispatch,
+  startup: () => dispatch(StartupActions.startup())
+})
+
+// Maps the state in to props (for displaying on the front end)
+const mapStateToProps = (state) => ({
+  user: state.user.user
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

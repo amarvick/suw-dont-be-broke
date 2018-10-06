@@ -8,18 +8,17 @@ class Home extends Component {
   constructor() {
     super()
 
-    // this.state = {
-    //   username: ''
-    // }
+    this.state = {
+      username: ''
+    }
   }
 
-  // The question template
   render(props) {  
-    let number = 10
+    let string = 'THIS WORKS!!!'
     
     return (
       <div>
-        { number }
+        { string }
       </div>
     )
   }
