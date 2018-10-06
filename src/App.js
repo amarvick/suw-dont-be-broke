@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Import components here
@@ -10,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     // 'goodResponse' will change based off of the backend and will determine whether to display the login screen or the user's account
-    const goodResponse
+    // will probably want to put this in using redux state
+    var goodResponse
 
     this.state = {
       loggedIn: goodResponse ? true : false
@@ -23,6 +23,7 @@ class App extends Component {
         <header className="App-header">
           { !this.state.loggedIn && 
             <Router>
+              <div>
                 <Route exact path='/' component={Home}/>
                 <Route path='/about' component={About}/>
                 {/* <Route path='/services' component={Services}/> */}
@@ -31,6 +32,7 @@ class App extends Component {
                 {/* <Route path='/gender' component={Gender}/> */}
                 {/* <Route path='/drones' component={Drones}/> */}
                 {/* <Route path='/software' component={Software}/> */}
+              </div>
             </Router>
           }
         </header>
