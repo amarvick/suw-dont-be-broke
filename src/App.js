@@ -19,7 +19,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Router>
-            {/* <div> */}
               <Route exact path='/' component={Home}/>
               {/* <Route path='/about' component={About}/> */}
               {/* <Route path='/services' component={Services}/> */}
@@ -28,7 +27,6 @@ class App extends Component {
               {/* <Route path='/gender' component={Gender}/> */}
               {/* <Route path='/drones' component={Drones}/> */}
               {/* <Route path='/software' component={Software}/> */}
-            {/* </div> */}
           </Router>
         </header>
       </div>

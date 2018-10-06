@@ -7,6 +7,10 @@ import '../../stylesheets/home.css'
 class Home extends Component {
   constructor() {
     super()
+
+    // this.state = {
+    //   username: ''
+    // }
   }
 
   // The question template
