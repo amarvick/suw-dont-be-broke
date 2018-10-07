@@ -12,7 +12,7 @@ import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import Calendar from 'react-calendar'
-import white from ''
+// import white from ''
 import '../../../../stylesheets/eventsCalendar.scss'
 
 class EventsCalendar extends Component {
