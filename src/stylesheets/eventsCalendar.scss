@@ -1,0 +1,16 @@
+$white: #f1f4f9;
+$color-secondary: #2b365d;
+
+.eventsCalendar {
+    background-color: $color-secondary;
+    width: 400px;
+    height: 100vh;
+    position: relative;
+    top: -20px;
+    float: right;
+    text-align: center;
+}
+
+.react-calendar {
+    margin: auto;
+}

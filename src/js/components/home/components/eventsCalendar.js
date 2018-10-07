@@ -11,34 +11,40 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
+import Calendar from 'react-calendar'
+// import something from ''
+import '../../../../stylesheets/eventsCalendar.scss'
 
-import EventsCalendar from './components/eventsCalendar'
-
-import '../../../stylesheets/home.scss'
-
-class Home extends Component {
+class EventsCalendar extends Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
       show: false,
-      username: ''
+      username: '',
+      date: new Date()
     };
   }
 
-  render(props) {  
-    const { classes } = this.props;
-    const style = {
-      margin: 15,
-    };
+  onChange = date => this.setState({ date })
 
+  render(props) { 
     return (
-      <div>
-        <EventsCalendar />
+      <div className="eventsCalendar">
+        <h1>
+            { this.state.date.toLocaleDateString() }
+        </h1>
+        <Calendar 
+            onChange = { this.onChange }
+            value = { this.state.date }
+        />
+        <h1>
+            Find Events Near You
+        </h1>
       </div>
     )
   }
 }
 
 // We need an intermediary variable for handling the recursive nesting.
-export default (Home)
+export default (EventsCalendar)
