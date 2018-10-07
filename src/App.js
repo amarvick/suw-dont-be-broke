@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 // Import components here
+import Navbar from './js/components/navbar'
 import Home from './js/components/home/home'
 import About from './js/components/about/about'
 
@@ -31,7 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          { user != null && 
+          <Navbar />
+          { user == null && 
             <Router>
               <div>
                 <Route exact path='/' component={Home}/>
