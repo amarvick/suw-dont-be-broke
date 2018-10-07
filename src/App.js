@@ -49,16 +49,6 @@ componentDidMount(){
           <Navbar />
           { user == null &&
             <div>
-              <Router>
-                  {/*<Route exact path='/' component={Home}/> *}
-                  {/* <Route path='/about' component={About}/> */}
-                  {/* <Route path='/services' component={Services}/> */}
-                  {/* <Route path='/contact' component={Contact}/> */}
-                  {/* <Route path='/blog' component={Blog}/> */}
-                  {/* <Route path='/gender' component={Gender}/> */}
-                  {/* <Route path='/drones' component={Drones}/> */}
-                  {/* <Route path='/software' component={Software}/> */}
-              </Router>
               <div className="containerNav">
                 <div className="headerRight">
                   { (this.state.loggedIn) ? 
@@ -89,6 +79,12 @@ componentDidMount(){
         <div className="subNav">
           <li>Useful Info here</li>
         </div>
+        <Router>
+          <div>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about' component={About}/>
+          </div>
+        </Router>
       </div>
     );
   }

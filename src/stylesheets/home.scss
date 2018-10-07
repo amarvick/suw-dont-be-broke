@@ -6,3 +6,134 @@ body {
     margin: 0;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
+
+.h1, .h2, .h3, h1, h2, h3 {
+    font-weight: bold;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+#progressBarHolder {
+    h2 {
+        display: inline-block;
+    }
+}
+
+.progressBar {
+    background-color: gray;
+    border: 1px solid white;
+    height: 3rem;
+
+    .progressInner {
+        background-color: green;
+        height: 100%;
+        text-align: right;
+        width: 50%;
+        transition: .5s;
+
+        .progressPercent {
+            color: white;
+            line-height: 3rem;
+            padding: 1rem;
+        }
+    }
+}
+
+.yourGoal {
+    text-align: right;
+    display: inline-block;
+    float: right;
+    margin-top: 3rem;
+
+    .editGoal {
+        margin-left: 2rem;
+    }
+}
+
+#featuredItems {
+    background: rgba(0, 0, 0, .1);
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2rem;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+.featuredRight {
+    display: inline-block;
+    margin-left: 1rem;
+    vertical-align: top;
+
+    .featuredImage{
+        width: 400px;
+
+        img {
+            width: 400px;
+            height: auto;
+        }
+    }
+
+    .featuredText {
+        background: #0099cc;
+        color: white;
+        font-size: 2rem;
+        height: 7rem;
+        line-height: 7rem;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+}
+
+.textLinkList {
+    display: inline-block;
+    margin-right: 6rem;
+    min-width: 200px;
+
+    ul {
+        padding-left: 0;
+        list-style-type: square;
+
+        li {
+            display: block;
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+
+            &:hover {
+                color: #0099cc;
+                cursor: pointer;
+            }
+
+            &:before {
+                content: "•";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                left: 5px;
+            }
+        }
+    }
+}
+
+#leftSide {
+    display: inline-block;
+}
+
+#rightSide {
+    background-color: gray;
+    color: white;
+    display: inline-block;
+    height: 100%;
+    width: 250px;
+    vertical-align: top;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    min-height: 200vh;
+}
