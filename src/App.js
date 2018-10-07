@@ -53,7 +53,7 @@ componentDidMount(){
 
               <div className="containerNav">
                 <div className="headerRight">
-                  { (this.state.loggedIn) ? 
+                  {/* { (this.state.loggedIn) ? 
                     <li className="userMenu">
                       <div className="userMenuToggle">User Menu</div>
                       <ul className="userMenuContent">
@@ -64,7 +64,7 @@ componentDidMount(){
                     </li> 
                     :
                     <li className="signUp"><a href="/signup">Sign Up</a></li> 
-                  }
+                  } */}
                   
                 </div>
               </div>

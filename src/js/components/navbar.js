@@ -11,6 +11,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
+import { white } from 'material-ui/styles/colors';
 // import something from ''
 // import '../../stylesheets/home.scss
 
@@ -60,8 +61,12 @@ class Navbar extends Component {
 
   render(props) {  
     const { classes } = this.props;
+    const textColor = {
+      color: white
+    }
     const style = {
-      margin: 15,
+      marginLeft: 15,
+      marginRight: 15
     };
 
     return (
@@ -69,16 +74,16 @@ class Navbar extends Component {
         <MuiThemeProvider>
           <div>
             <ul>              
-              <li className="active"><a href="/">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <Button onClick={this.handleOpen}>Sign Up</Button>
+              <li style={style} className="active"><a href="/">Home</a></li>
+              <li style={style}><a href="#">About Us</a></li> {/* /about - Make component real quick */}
+              <li style={style}><a href="#" onClick={this.handleOpen} style={textColor} id='signUpButton'>Sign Up</a></li>
               <li className="userMenu">
                 {/* <div className="userMenuToggle">User Menu</div> */}
-                <ul className="userMenuContent">
+                {/* <ul className="userMenuContent">
                   <li href="http://apple.com">User Item 1</li>
                   <li>User Item 2</li>
                   <li>User Item 3</li>
-                </ul>
+                </ul> */}
               </li> 
             </ul>
           </div>
