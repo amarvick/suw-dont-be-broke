@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import Navbar from './js/components/navbar'
 import Home from './js/components/home/home'
 import About from './js/components/about/about'
+import Quotes from './js/components/home/components/quotes'
 
 import './stylesheets/nav.scss'
 
@@ -73,7 +74,7 @@ componentDidMount(){
         </header>
 
         <div className="subNav">
-          <li>Useful Info here</li>
+          <Quotes />
         </div>
 
         <Router>

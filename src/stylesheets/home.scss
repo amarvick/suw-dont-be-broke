@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 body {
-    // background-color: #fbfbfb;
     background-color: #f1f4f9;
     margin: 0;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
@@ -26,20 +25,32 @@ body {
 .progressBar {
     background-color: gray;
     border: 1px solid white;
-    height: 3rem;
+    border-radius: 2rem;
+    height: 4rem;
+    margin-bottom: 5rem;
 
     .progressInner {
         background-color: green;
         height: 100%;
         text-align: right;
-        width: 50%;
+        width: 25%;
+        border-radius: 2rem;
         transition: 1s;
 
         .progressPercent {
             color: white;
-            line-height: 3rem;
+            line-height: 4rem;
             padding: 1rem;
         }
+    }
+
+    .progressBarMessage {
+        text-align: center;
+        padding: .5rem;
+        margin: 0px auto 0rem;
+        display: block;
+        width: 150px;
+        font-size: 1.5rem;
     }
 }
 
@@ -112,10 +123,10 @@ body {
 
             &:before {
                 content: "•";
-                position: absolute;
-                width: 50px;
                 height: 50px;
                 left: 5px;
+                position: absolute;
+                width: 50px;
             }
         }
     }
@@ -130,7 +141,7 @@ body {
     color: white;
     display: inline-block;
     height: 100%;
-    min-height: 200vh;
+    min-height: 130vh;
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -139,13 +150,17 @@ body {
 }
 
 .eventsCalendar {
-    width: 250px!important;
-    right: -10px;
     background-color: gray;
+    right: -10px;
     top: 0;
+    width: 250px!important;
 
     button time {
         color: #3c3c3c;
+    }
+
+    p {
+        padding: .5rem;
     }
 }
 
@@ -156,12 +171,12 @@ body {
 #quoteHolder  {
     text-align: center;
     color: #0099cc;
-    padding: 2rem 1rem;
+    padding: 0;
 
     h2 {
         font-size: 2rem;
-        max-width: 800px;
-        margin: 2rem auto 0;
+        // max-width: 800px;
+        margin: 0rem auto 0;
     }
 }
 
@@ -174,9 +189,9 @@ body {
     display: none;
     height: 100%;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 3;
-    top: 0;
 
     &.showModal {
         display: block;
@@ -185,11 +200,11 @@ body {
     .modalInner {
         background:blue;
         color: white;
-        margin: 12rem auto;
         height: 600px;
-        width: 700px;
-        overflow-y: auto;
+        margin: 12rem auto;
         overflow-x: hidden;
+        overflow-y: auto;
+        width: 700px;
 
         img {
             width: 800px;
@@ -202,3 +217,75 @@ body {
     }
 }
 
+#learningModal {
+
+}
+
+
+#pathProgress {
+    padding: 1rem;
+    background: #f1f1f1;
+    width: 1000px;
+    height: 400px;
+    margin: 5rem auto;
+    z-index: 4;
+    text-align: center;
+
+    .circle {
+        background-color: gray;
+        border-radius: 50%;
+        border: 8px solid gray;
+        display: inline-block;
+        height: 150px;
+        overflow: hidden;
+        vertical-align: middle;
+        width: 150px;
+    }
+    .line {
+        background-color: gray;
+        display: inline-block;
+        margin: -3px;
+        padding: 2rem;
+        vertical-align: middle;
+        width: 120px;
+    }
+
+    h2 {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    .yourGoal {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+
+.learningPath {
+    color: #2b365d;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 4rem;
+    padding-left: 5rem;
+    position: relative;
+    text-transform: uppercase;
+
+    &:before {
+        background-image: url('/learning-path.svg');
+        height: 40px;
+        width: 40px;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -12px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: #0099cc;
+    }
+
+}
