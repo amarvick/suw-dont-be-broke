@@ -1,4 +1,7 @@
-$primary-color: #515d2b;
+$color-primary: #515d2b;
+$color-secondary: #2b365d;
+$color-highlight: #0099cc;
+$color-white: #fff;
 
 li {
   display: inline-block;
@@ -6,18 +9,39 @@ li {
   position: relative;
 }
 
+.headerLeft {
+  width: 400px;
+  display: flex;
+}
+
+.headerRight {
+  float: right;
+  margin-right: 2rem;
+}
+
+.containerNav {
+  width: 100%;
+  margin: auto;
+}
+
 .App-header {
-  background: #1f1f1f;
-  color: white;
+  background: $color-highlight;
+  color: $color-white;
   display: flex; 
   padding: 1rem;
+  position: relative;
 
-  li {
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  > li {
     &.active {
-      color: $primary-color;
+      color: $color-primary;
 
       &:after {
-        border-bottom: 5px solid $primary-color;
+        border-bottom: 5px solid $color-primary;
         bottom: -1rem;
         content: "";
         left: 0;
@@ -28,9 +52,9 @@ li {
 
     &:hover {
       cursor: pointer;
-      
+
       &:after{
-        border-bottom: 5px solid $primary-color;
+        border-bottom: 5px solid $color-primary;
         bottom: -1rem;
         content: "";
         left: 0;
@@ -43,11 +67,40 @@ li {
   @media screen {
     
   }
+
+  .userMenu {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .userMenuContent {
+      background: $color-highlight;
+      box-shadow: 1px 6px 7px rgba(0, 0, 0, .3);
+      margin: 0;
+      min-width: 120px;
+      padding: 0;
+      padding: 1rem;
+      position: absolute;
+      display: none;
+      z-index: 5;
+      margin-left: -1rem;
+
+      &.showMenu {
+        display: block;
+      }
+
+      li {
+        padding: .5rem 0;
+        color: $color-white;
+      }
+    }
+  }
 }
 
 .subNav {
-  background-color: #2b365d;
+  background-color: $color-secondary;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: $color-white;
   padding: 1rem;
 }
