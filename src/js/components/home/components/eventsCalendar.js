@@ -14,6 +14,7 @@ import TextField from 'material-ui/TextField'
 import Calendar from 'react-calendar'
 import { white } from 'material-ui/styles/colors';
 import '../../../../stylesheets/eventsCalendar.scss'
+import { green400 } from 'material-ui/styles/colors';
 
 class EventsCalendar extends Component {
   constructor(props, context) {
@@ -28,15 +29,16 @@ class EventsCalendar extends Component {
 
   onChange = date => this.setState({ date })
 
+  
+
   render(props) { 
     let style = { color: white }
     let theFontSize = { fontSize: 16 }
-    
+
     let theEvent
     let theDate = this.state.date.toLocaleDateString()
     let theTime
     let theAddress
-    
     if (theDate == '10/7/2018') { 
       theEvent = 'Seattle Startup Weekend pitches!'
       theTime = '3:00PM'
