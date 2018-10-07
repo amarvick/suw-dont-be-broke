@@ -38,7 +38,6 @@ class EventsCalendar extends Component {
     let theDate = this.state.date.toLocaleDateString()
     let theTime
     let theAddress
-
     if (theDate == '10/7/2018') { 
       theEvent = 'Seattle Startup Weekend pitches!'
       theTime = '3:00PM'
