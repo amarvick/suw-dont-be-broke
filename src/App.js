@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 // Import components here
-import './stylesheets/nav.scss'
+import Navbar from './js/components/navbar'
 import Home from './js/components/home/home'
 import About from './js/components/about/about'
 
@@ -52,6 +52,8 @@ componentDidMount(){
     return (
       <div className="App">
         <header className="App-header">
+          <Navbar />
+          { user == null &&
 
           <Router>
               {/*<Route exact path='/' component={Home}/> *}
