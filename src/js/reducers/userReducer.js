@@ -1,7 +1,7 @@
 // /* File Name: userReducer.js                                        *
   // Description: Redux reducer for the user                        
 
-import UserActionTypes from '../actiontypes/userActionTypes'
+import UserActionTypes from '../actionTypes/userActionTypes'
 
 export default function reducer(state={
     fetched: false,
