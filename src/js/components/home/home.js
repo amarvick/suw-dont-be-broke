@@ -2,7 +2,10 @@
  * Description: Home Page                                       */
 
 import React, { Component } from 'react';
-// import something from ''
+import PropTypes from 'prop-types';
+
+import EventsCalendar from './components/eventsCalendar'
+
 import '../../../stylesheets/home.scss'
 
 class Home extends Component {
@@ -23,6 +26,7 @@ class Home extends Component {
 
     return (
       <div>
+        <EventsCalendar />
       </div>
     )
   }
