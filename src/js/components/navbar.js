@@ -75,7 +75,7 @@ class Navbar extends Component {
           <div>
             <ul>              
               <li style={style} className="active"><a href="/">Home</a></li>
-              <li style={style}><a href="#">About Us</a></li> {/* /about - Make component real quick */}
+              <li style={style}><a href="/About">About Us</a></li> {/* /about - Make component real quick */}
               <li style={style}><a href="#" onClick={this.handleOpen} style={textColor} id='signUpButton'>Sign Up</a></li>
               <li className="userMenu">
                 {/* <div className="userMenuToggle">User Menu</div> */}

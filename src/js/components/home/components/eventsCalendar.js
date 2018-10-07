@@ -14,7 +14,7 @@ import TextField from 'material-ui/TextField'
 import Calendar from 'react-calendar'
 // import something from ''
 import '../../../../stylesheets/eventsCalendar.scss'
-import { green400 } from 'material-ui/styles/colors';
+import { white } from 'material-ui/styles/colors';
 
 class EventsCalendar extends Component {
   constructor(props, context) {
@@ -32,7 +32,7 @@ class EventsCalendar extends Component {
   
 
   render(props) { 
-    let style = { color: green400 }
+    let style = { color: white }
     let theFontSize = { fontSize: 16 }
 
     let theEvent
