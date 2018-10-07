@@ -26,14 +26,14 @@ componentDidMount(){
 }
 
   userMenu(){
-    console.log("inside the userMenu code block");
-    if (document.querySelector(".userMenuContent")) {
-      let menuContent = document.querySelector(".userMenuContent");
-      document.querySelector(".userMenuToggle").addEventListener("click", ()=>{
-        console.log("Clicked on user menu toggle");
-        menuContent.classList.contains("showMenu") ? menuContent.classList.remove("showMenu") : menuContent.classList.add("showMenu")
-      })
-    }
+    // console.log("inside the userMenu code block");
+    // if (document.querySelector(".userMenuContent")) {
+    //   let menuContent = document.querySelector(".userMenuContent");
+    //   document.querySelector(".userMenuToggle").addEventListener("click", ()=>{
+    //     console.log("Clicked on user menu toggle");
+    //     menuContent.classList.contains("showMenu") ? menuContent.classList.remove("showMenu") : menuContent.classList.add("showMenu")
+    //   })
+    // }
   }
 
   // signUp
@@ -45,23 +45,15 @@ componentDidMount(){
     return (
       <div className="App">
         <header className="App-header">
+
           
           <Navbar />
-          { user == null &&
+          { user != null &&
             <div>
-              <Router>
-                  {/*<Route exact path='/' component={Home}/> *}
-                  {/* <Route path='/about' component={About}/> */}
-                  {/* <Route path='/services' component={Services}/> */}
-                  {/* <Route path='/contact' component={Contact}/> */}
-                  {/* <Route path='/blog' component={Blog}/> */}
-                  {/* <Route path='/gender' component={Gender}/> */}
-                  {/* <Route path='/drones' component={Drones}/> */}
-                  {/* <Route path='/software' component={Software}/> */}
-              </Router>
+
               <div className="containerNav">
                 <div className="headerRight">
-                  { (this.state.loggedIn) ? 
+                  {/* { (this.state.loggedIn) ? 
                     <li className="userMenu">
                       <div className="userMenuToggle">User Menu</div>
                       <ul className="userMenuContent">
@@ -72,15 +64,9 @@ componentDidMount(){
                     </li> 
                     :
                     <li className="signUp"><a href="/signup">Sign Up</a></li> 
-                  }
+                  } */}
                   
                 </div>
-
-                <div className="headerLeft">
-                  <li className="active"><a href="/">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                </div>
-
               </div>
             </div>
           }
@@ -89,6 +75,13 @@ componentDidMount(){
         <div className="subNav">
           <li>Useful Info here</li>
         </div>
+
+        <Router>
+          <div>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about' component={About}/>
+          </div>
+        </Router>
       </div>
     );
   }

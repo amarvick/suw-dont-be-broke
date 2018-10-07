@@ -11,6 +11,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
+import { white } from 'material-ui/styles/colors';
 // import something from ''
 // import '../../stylesheets/home.scss
 
@@ -65,8 +66,12 @@ class Navbar extends Component {
 
   render(props) {  
     const { classes } = this.props;
+    const textColor = {
+      color: white
+    }
     const style = {
-      margin: 15,
+      marginLeft: 15,
+      marginRight: 15
     };
 
     let signUpModal = (
@@ -145,11 +150,10 @@ class Navbar extends Component {
                   { this.state.isSignUpModal &&
                      signUpModal 
                   }
-
                   { !this.state.isSignUpModal &&
                     personaModal
                   }
-                </div>
+               </div>
             </Modal>  
           </div>
         </MuiThemeProvider>

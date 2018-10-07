@@ -11,7 +11,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
-// import something from ''
+
+import Quotes from './components/quotes'
+
+import EventsCalendar from './components/eventsCalendar'
+
 import '../../../stylesheets/home.scss'
 
 class Home extends Component {
@@ -24,14 +28,103 @@ class Home extends Component {
     };
   }
 
-  render(props) {  
+  componentDidMount(){
+    this.textLinkProgress();
+  }
+
+  textLinkProgress() {
+
+  }
+
+  handleClick(event){
+    document.querySelector(".modalWindow").classList.add("showModal");
+    
+    document.querySelector(".modalWindow").addEventListener("click", ()=>{
+      document.querySelector(".modalWindow").classList.remove("showModal");
+      let progressWidth = getComputedStyle(document.querySelector(".progressInner")).width.split("px")[0];
+      console.log(Number(progressWidth)+50)
+      document.querySelector(".progressInner").setAttribute("style", `width:${Number(progressWidth)+50}px`);
+      document.querySelector(".progressPercent").innerText = `${(((Number(progressWidth)+10)/1130)*100).toFixed(0)}%`;
+    });
+  } 
+
+  render(props) {
     const { classes } = this.props;
     const style = {
       margin: 15,
     };
 
     return (
-      <div>
+      <div className="containerMain">
+      <div className="modalWindow">
+        <div className="modalInner">
+          <div></div>
+          <img src="./article2.jpg" />
+        </div>
+      </div>
+      <div id="leftSide" className="container">
+      <div id="progressBarHolder">
+        <h2>Your Progress</h2>
+        <div className="yourGoal">Your Goal: <span className="goalName">Budgeting</span><span className="editGoal">
+          <a>Edit</a>
+          </span>
+        </div>
+        <div className="progressBar">
+          <div className="progressInner"><span className="progressPercent">50%</span></div>
+        </div>
+      </div>
+        <Quotes />
+        <div id="featuredItems">
+          <h2>Featured Tasks</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tsin6TIle3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div className="featuredRight">
+            <div className="featuredText">How does credit work?</div>
+            <div className="featuredImage"><img src="./creditScore.png" /></div>
+          </div>
+        </div>
+        <div id="textLinks">
+          <div id="budgetingLinks" className="textLinkList">
+            <h3>Budgeting</h3>
+            <ul>
+              <li>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+          
+          <div id="investingLinks" className="textLinkList">
+            <h3>Investing</h3>
+            <ul>
+              <li className="listItem" onClick={(event) => this.handleClick(event)}>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+          
+          <div id="debtLinks" className="textLinkList">
+            <h3>Reducing Debt</h3>
+            <ul>
+              <li className="listItem" onClick={(event) => this.handleClick(event)}>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+
+          <div id="debtLinks" className="textLinkList">
+            <h3>Retirement Planning</h3>
+            <ul>
+              <li className="listItem" onClick={(event) => this.handleClick(event)}>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div id="rightSide">
+        <EventsCalendar />
+      </div>
+      
       </div>
     )
   }
