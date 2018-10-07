@@ -113,7 +113,7 @@ class Navbar extends Component {
             Select the persona you identify most with
           </Typography>
         <div padding = '3pt'>
-          <a href="../../home"><img src="./p1.jpg" height= "150pt" padding='2pt' className="persona"/></a>
+          <a href="/"><img src="./p1.jpg" height= "150pt" padding='2pt' className="persona"/></a>
           <text variant="display1" margin left='5 pt' className="persona"> Josh Sanchez </text>
           <div variant="title" margin left= '10pt' align="right" className="persona">Hi! I'm Josh Sanchez, and I'm a 17 year old student at Sierra High School. This coming fall I'm going to be enrolled as a Pre-Med student at the Boston University. I have a part time job at a local retail store and need to begin to budget in order to pay off my college loans.Want to learn more about investing in order to start preparing for the future and growing my financial assets.</div>
         </div>

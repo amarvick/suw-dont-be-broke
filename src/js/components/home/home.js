@@ -75,7 +75,7 @@ class Home extends Component {
       </div>
         <Quotes />
         <div id="featuredItems">
-          <h2>Featured Tasks</h2>
+          <h2>Featured Goals</h2>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/tsin6TIle3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <div className="featuredRight">
             <div className="featuredText">How does credit work?</div>
