@@ -32,6 +32,8 @@ class Home extends Component {
 
     return (
       <div>
+        <h2>Quote goes here</h2>
+        
       </div>
     )
   }
