@@ -104,3 +104,14 @@ li {
   color: $color-white;
   padding: 1rem;
 }
+
+.Navbar-paper-1 {
+  width: 1000px!important;
+  .persona {
+    display: inline-block;
+    max-width: 500px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
