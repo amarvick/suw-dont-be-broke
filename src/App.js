@@ -40,7 +40,7 @@ componentDidMount(){
   
 
   render() {
-    // let user = this.props.user || {}
+    let user = this.props.user || {}
 
     return (
       <div className="App">
