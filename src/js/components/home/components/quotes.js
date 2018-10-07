@@ -11,19 +11,19 @@ class Quotes extends Component {
   
   randomQuote(){
     let quotes = [
-      "First statistic about financial literacy",
-      "Second statistic about financial literacy",
-      "Third statistic about financial literacy"
+      "'If you born poor, it's not your mistake. But if you die poor, it's your mistake.' - Bill Gates",
+      "'Poverty is the root of all evil.' - Les Brown",
+      "'The best way to teach your kids about taxes is by eating 30% of their ice cream.' - Bill Murray"
     ]
-    let results = Math.floor(Math.random() * quotes.length);
-    console.log(quotes[results], results);
-    return results;
+    let index = Math.floor(Math.random() * quotes.length);
+    console.log(quotes[index], index);
+    return quotes[index];
   }
 
-  render(props) {  
+  render(props) {
     return (
       <div>
-        <h2>{this.randomQuote}</h2>
+        <h2>{this.randomQuote()}</h2>
       </div>
     )
   }
