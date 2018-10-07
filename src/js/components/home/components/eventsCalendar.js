@@ -12,7 +12,6 @@ import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import Calendar from 'react-calendar'
-// import something from ''
 import '../../../../stylesheets/eventsCalendar.scss'
 import { white } from 'material-ui/styles/colors';
 
