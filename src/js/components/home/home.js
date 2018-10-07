@@ -94,7 +94,7 @@ class Home extends Component {
         </div>
         <div className="learningPath" onClick={(event) => this.learningClick(event)}>View Learning Path...</div>
         <div className="progressBar">
-          <div className="progressInner"><span className="progressPercent">50%</span></div>
+          <div className="progressInner"><span className="progressPercent">25%</span></div>
           <div className="progressBarMessage">Great Work! 🎉</div>
         </div>
       </div>
