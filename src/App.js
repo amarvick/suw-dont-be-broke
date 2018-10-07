@@ -6,6 +6,9 @@ import { connect } from 'react-redux'
 import Home from './js/components/home/home'
 import About from './js/components/about/about'
 
+// Import actions here
+import { fetchUser } from './js/actions/userActions'
+
 class App extends Component {
   constructor() {
     super()
@@ -16,6 +19,10 @@ class App extends Component {
     this.state = {
       loggedIn: goodResponse ? true : false
     }
+  }
+
+  componentWillMount() {
+    // this.props.dispatch(fetchUser());
   }
 
   render() {
@@ -42,7 +49,8 @@ class App extends Component {
 // Mapping dispatch actions to the props
 const mapDispatchToProps = (dispatch) => ({
   dispatch: dispatch,
-  startup: () => dispatch(StartupActions.startup())
+  startup: () => dispatch(StartupActions.startup()),
+  fetchUser: () => dispatch(fetchUser())
 })
 
 // Maps the state in to props (for displaying on the front end)
