@@ -68,9 +68,19 @@ class Navbar extends Component {
       <div>
         <MuiThemeProvider>
           <div>
-            <AppBar>
+            <ul>              
+              <li className="active"><a href="/">Home</a></li>
+              <li><a href="#">About Us</a></li>
               <Button onClick={this.handleOpen}>Sign Up</Button>
-            </AppBar>
+              <li className="userMenu">
+                {/* <div className="userMenuToggle">User Menu</div> */}
+                <ul className="userMenuContent">
+                  <li href="http://apple.com">User Item 1</li>
+                  <li>User Item 2</li>
+                  <li>User Item 3</li>
+                </ul>
+              </li> 
+            </ul>
           </div>
         </MuiThemeProvider>
 
