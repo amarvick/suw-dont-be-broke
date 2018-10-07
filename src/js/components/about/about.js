@@ -23,7 +23,9 @@ class About extends Component {
 
     return (
       <div>
-        About page
+        <h1>
+            This service teaches YOU, the average high school OR young college kid, how to NOT live a broke future!
+        </h1>
       </div>
     )
   }
