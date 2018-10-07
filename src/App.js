@@ -67,8 +67,9 @@ componentDidMount(){
                   }
                   
                 </div>
-
-          </div>
+              </div>
+            </div>
+          }
         </header>
 
         <div className="subNav">
