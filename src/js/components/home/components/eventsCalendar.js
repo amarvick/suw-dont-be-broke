@@ -12,7 +12,7 @@ import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import Calendar from 'react-calendar'
-// import something from ''
+import { white } from 'material-ui/styles/colors';
 import '../../../../stylesheets/eventsCalendar.scss'
 import { green400 } from 'material-ui/styles/colors';
 
@@ -32,14 +32,13 @@ class EventsCalendar extends Component {
   
 
   render(props) { 
-    let style = { color: green400 }
+    let style = { color: white }
     let theFontSize = { fontSize: 16 }
 
     let theEvent
     let theDate = this.state.date.toLocaleDateString()
     let theTime
     let theAddress
-
     if (theDate == '10/7/2018') { 
       theEvent = 'Seattle Startup Weekend pitches!'
       theTime = '3:00PM'
