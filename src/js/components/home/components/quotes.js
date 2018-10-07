@@ -22,7 +22,7 @@ class Quotes extends Component {
 
   render(props) {
     return (
-      <div>
+      <div id="quoteHolder">
         <h2>{this.randomQuote()}</h2>
       </div>
     )

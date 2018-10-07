@@ -37,11 +37,15 @@ class Home extends Component {
   }
 
   handleClick(event){
-    // document.querySelector(".progressInner").getAttribute("style", "width")
-    let progressWidth = getComputedStyle(document.querySelector(".progressInner")).width.split("px")[0];
-    console.log(Number(progressWidth)+50)
-    document.querySelector(".progressInner").setAttribute("style", `width:${Number(progressWidth)+50}px`);
-    document.querySelector(".progressPercent").innerText = `${(((Number(progressWidth)+10)/1130)*100).toFixed(2)}%`;
+    document.querySelector(".modalWindow").classList.add("showModal");
+    
+    document.querySelector(".modalWindow").addEventListener("click", ()=>{
+      document.querySelector(".modalWindow").classList.remove("showModal");
+      let progressWidth = getComputedStyle(document.querySelector(".progressInner")).width.split("px")[0];
+      console.log(Number(progressWidth)+50)
+      document.querySelector(".progressInner").setAttribute("style", `width:${Number(progressWidth)+50}px`);
+      document.querySelector(".progressPercent").innerText = `${(((Number(progressWidth)+10)/1130)*100).toFixed(0)}%`;
+    });
   } 
 
   render(props) {
@@ -52,6 +56,12 @@ class Home extends Component {
 
     return (
       <div className="containerMain">
+      <div className="modalWindow">
+        <div className="modalInner">
+          <div></div>
+          <img src="./article2.jpg" />
+        </div>
+      </div>
       <div id="leftSide" className="container">
       <div id="progressBarHolder">
         <h2>Your Progress</h2>
@@ -90,6 +100,25 @@ class Home extends Component {
               <li>Item Three</li>
             </ul>
           </div>
+          
+          <div id="debtLinks" className="textLinkList">
+            <h3>Reducing Debt</h3>
+            <ul>
+              <li className="listItem" onClick={(event) => this.handleClick(event)}>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+
+          <div id="debtLinks" className="textLinkList">
+            <h3>Retirement Planning</h3>
+            <ul>
+              <li className="listItem" onClick={(event) => this.handleClick(event)}>Item One</li>
+              <li>Item Two</li>
+              <li>Item Three</li>
+            </ul>
+          </div>
+
         </div>
       </div>
       <div id="rightSide">

@@ -33,7 +33,7 @@ body {
         height: 100%;
         text-align: right;
         width: 50%;
-        transition: .5s;
+        transition: 1s;
 
         .progressPercent {
             color: white;
@@ -152,3 +152,53 @@ body {
 .react-calendar__navigation {
     color: black!important;
 }
+
+#quoteHolder  {
+    text-align: center;
+    color: #0099cc;
+    padding: 2rem 1rem;
+
+    h2 {
+        font-size: 2rem;
+        max-width: 800px;
+        margin: 2rem auto 0;
+    }
+}
+
+.textLinks {
+    margin-top: 4rem;
+}
+
+.modalWindow {
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+
+    &.showModal {
+        display: block;
+    }
+
+    .modalInner {
+        background:blue;
+        color: white;
+        margin: 12rem auto;
+        height: 600px;
+        width: 700px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        img {
+            width: 800px;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+        }
+
+    }
+}
+
