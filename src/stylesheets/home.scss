@@ -137,3 +137,17 @@ body {
     right: 0;
     min-height: 200vh;
 }
+
+.eventsCalendar {
+    width: 250px!important;
+    right: -10px;
+    background-color: gray;
+
+    button time {
+        color: #3c3c3c;
+    }
+}
+
+.react-calendar__navigation {
+    color: black!important;
+}

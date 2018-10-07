@@ -13,6 +13,9 @@ import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 
 import Quotes from './components/quotes'
+
+import EventsCalendar from './components/eventsCalendar'
+
 import '../../../stylesheets/home.scss'
 
 class Home extends Component {
@@ -90,7 +93,7 @@ class Home extends Component {
         </div>
       </div>
       <div id="rightSide">
-        hello
+        <EventsCalendar />
       </div>
       
       </div>
