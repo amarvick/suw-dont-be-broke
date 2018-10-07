@@ -1,12 +1,8 @@
-// .modal-container {
-//     position: relative;
-// }
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
-// .modal-container .modal, .modal-container .modal-backdrop {
-//     position: absolute;
-// }
-
-// .modal-content {
-//     position: relative;
-//     top: 80px;
-// }
+body {
+    // background-color: #fbfbfb;
+    background-color: #f1f4f9;
+    margin: 0;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
