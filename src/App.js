@@ -26,25 +26,26 @@ componentDidMount(){
 }
 
   userMenu(){
-    console.log("inside the userMenu code block");
-    if (document.querySelector(".userMenuContent")) {
-      let menuContent = document.querySelector(".userMenuContent");
-      document.querySelector(".userMenuToggle").addEventListener("click", ()=>{
-        console.log("Clicked on user menu toggle");
-        menuContent.classList.contains("showMenu") ? menuContent.classList.remove("showMenu") : menuContent.classList.add("showMenu")
-      })
-    }
+    // console.log("inside the userMenu code block");
+    // if (document.querySelector(".userMenuContent")) {
+    //   let menuContent = document.querySelector(".userMenuContent");
+    //   document.querySelector(".userMenuToggle").addEventListener("click", ()=>{
+    //     console.log("Clicked on user menu toggle");
+    //     menuContent.classList.contains("showMenu") ? menuContent.classList.remove("showMenu") : menuContent.classList.add("showMenu")
+    //   })
+    // }
   }
 
   // signUp
   
 
   render() {
-    let user = this.props.user || {}
+    // let user = this.props.user || {}
 
     return (
       <div className="App">
         <header className="App-header">
+
           
           <Navbar />
           { user != null &&
@@ -67,14 +68,7 @@ componentDidMount(){
                   
                 </div>
 
-                <div className="headerLeft">
-                  <li className="active"><a href="/">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                </div>
-
-              </div>
-            </div>
-          }
+          </div>
         </header>
 
         <div className="subNav">
