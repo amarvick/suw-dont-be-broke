@@ -10,4 +10,4 @@ ReactJS Front-End of the "Don't be Broke" web application which helps young adul
 2) Grab dependencies with ```npm install```
 3) Start with ```npm start```
 
-#### Linked with backend at  ```git clone https://github.com/josephkniest/suw-dont-be-broke-backend.git```: http://172.17.5.252/api/authorize
+#### Linked with backend at  ```https://github.com/josephkniest/suw-dont-be-broke-backend.git```: http://172.17.5.252/api/authorize
